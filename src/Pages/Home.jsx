@@ -16,9 +16,17 @@ function Home() {
   }, []);
 
   return(<div>
-   { users.length >0 
-   ?<h1>{users.length>0 ? users[0].username:null  }</h1>
-   : <h1>loading ...</h1>   }</div> )
+    {
+      users.map((user)=>(
+         <div  key ={user.id} style={{border: "red solid 1px" , margin:"4px"}}>
+            <h1>{user?.name}</h1>
+            <h1>{user?.username}</h1>
+            <h1>{user?.id}</h1>
+         </div>)
+
+      )
+    }
+    </div> )
   
 }
 
