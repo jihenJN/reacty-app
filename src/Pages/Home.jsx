@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import User from "../components/User";
 function Home() {
    const [users,setUsers]=useState([])
   async function fetchData() {
@@ -18,11 +19,7 @@ function Home() {
   return(<div>
     {
       users.map((user)=>(
-         <div  key ={user.id} style={{border: "red solid 1px" , margin:"4px"}}>
-            <h1>{user?.name}</h1>
-            <h1>{user?.username}</h1>
-            <h1>{user?.id}</h1>
-         </div>)
+        <User key={user.id} id={user.id} name={user.name} username={user.username}/>)
 
       )
     }
