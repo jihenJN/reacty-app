@@ -1,0 +1,2 @@
+from the site : https://jsonplaceholder.typicode.com/
+the api to fetch is :https://jsonplaceholder.typicode.com/users
